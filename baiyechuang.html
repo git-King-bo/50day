@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background: url('https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1458&q=80');
+    background-size: cover;
+  }
+
+  #parent {
+    display: flex;
+    margin: 200px 100px;
+    /* width: 1000px; */
+    overflow: hidden;
+    box-shadow: 7px 7px 15px #000;
+  }
+
+  .baiyediv {
+    overflow: hidden;
+    transition: all 0.9s;
+  }
+
+  .baiyediv:hover {
+    flex-shrink: 0;
+  }
+
+  img {
+    height: 500px;
+    object-fit: cover;
+
+  }
+</style>
+
+<body>
+  <div id="parent">
+    <div class="baiyediv"><img
+        src="https://img2.baidu.com/it/u=3573215780,1955014760&fm=253&fmt=auto&app=138&f=JPEG?w=740&h=500" alt=""></div>
+    <div class="baiyediv"><img
+        src="https://img1.baidu.com/it/u=1905969,4217365094&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt=""></div>
+    <div class="baiyediv">
+      <img src="https://img0.baidu.com/it/u=1721565562,1528548791&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt="">
+    </div>
+    <div class="baiyediv">
+      <img src="https://img2.baidu.com/it/u=2778307432,3627918285&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt="">
+    </div>
+    <div class="baiyediv">
+      <img src="https://img1.baidu.com/it/u=3894949929,2192306978&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt="">
+    </div>
+    <div class="baiyediv">
+      <img src="https://img1.baidu.com/it/u=3183029904,4249790136&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800" alt="">
+    </div>
+    <div class="baiyediv">
+      <img src="https://img0.baidu.com/it/u=13585177,3439429771&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=296" alt="">
+    </div>
+  </div>
+</body>
+<script>
+
+  async function getDta () {
+    const res = await fetch('https://randomuser.me/api?results=50')
+    const { results } = await res.json()
+    console.log(results)
+  }
+  getDta()
+</script>
+
+</html>
