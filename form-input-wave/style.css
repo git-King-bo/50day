@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); */
 
 * {
   box-sizing: border-box;
@@ -95,7 +95,11 @@ body {
 }
 
 .form-control input:focus + label span,
-.form-control input:valid + label span {
+.form-control input[type='password']:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+.foc + label span {
   color: lightblue;
   transform: translateY(-30px);
 }
